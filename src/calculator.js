@@ -30,4 +30,8 @@ export class EarthAge {
     let nepAge = this.age * 0.006
     return nepAge;
   }
+  pluCalc() {
+    let pluAge = this.age * 0.004
+    return pluAge;
+  }
 }
