@@ -100,3 +100,11 @@ describe('untilBDay', () => {
     expect(untilBDay(currentAge, futureAge)).toEqual({earthAge: 12, mercAge: 50.004, venAge: 19.356, marsAge: 6.384, jupAge: 1.008, satAge: 0.408, urAge: 0.144, nepAge: 0.072, pluAge: 0.048});
   });
 });
+
+describe('exactAge', () => {
+  test('should take two dates as arguments and find the number of days between them. then, should convert that number into an exact age in years', () => {
+    const date1 = "1990-11-02";
+    const date2 = "2023-11-13";
+    expect(exactAge(date1, date2)).toEqual(12064);
+  });
+});

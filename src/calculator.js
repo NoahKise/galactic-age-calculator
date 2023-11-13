@@ -76,3 +76,4 @@ export function untilBDay(currentAge, futureAge) {
   console.log(calculatedAgeDifs);
   return calculatedAgeDifs;
 }
+
