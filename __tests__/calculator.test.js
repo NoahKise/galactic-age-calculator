@@ -122,3 +122,10 @@ describe('futMercCal()', () => {
     expect(noah.futMercCal()).toEqual(29.568);
   });
 });
+
+describe('futVenCal()', () => {
+  test('should find how much of a year is left before the next birthday on Venus, and multiply that by 225', () => {
+    const noah = new SolarAges(33.032, 137.664, 53.281, 17.573, 2.775, 1.123, 0.396, 0.198, 0.132)
+    expect(noah.futVenCal()).toEqual(161.775);
+  });
+});
