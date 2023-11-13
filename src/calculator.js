@@ -58,6 +58,11 @@ export class SolarAges {
     let daysUntil = (remainder * 88);
     return parseFloat(daysUntil.toFixed(3));
   }
+  futVenCal() {
+    let remainder = (Math.ceil(this.venAge)) - this.venAge;
+    let daysUntil = (remainder * 225);
+    return parseFloat(daysUntil.toFixed(3));
+  }
 }
 
 export function allAgesCalc(EarthAge) {
