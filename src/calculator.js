@@ -48,6 +48,11 @@ export class SolarAges {
     this.nepAge = nepAge;
     this.pluAge = pluAge;
   }
+  futEarthCal() {
+    let remainder = (Math.ceil(this.earthAge)) - this.earthAge;
+    let daysUntil = (remainder * 365.25);
+    return parseFloat(daysUntil.toFixed(3));
+  }
 }
 
 export function allAgesCalc(EarthAge) {
