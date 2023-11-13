@@ -50,7 +50,7 @@ export class SolarAges {
   }
 }
 
-export function allAgesCalc(EarthAge){
+export function allAgesCalc(EarthAge) {
   let earthAge = EarthAge.age;
   let mercAge = EarthAge.mercCalc();
   let venAge = EarthAge.venCalc();
@@ -61,6 +61,12 @@ export function allAgesCalc(EarthAge){
   let nepAge = EarthAge.nepCalc();
   let pluAge = EarthAge.pluCalc();
   const calculatedSolarAges = new SolarAges(earthAge, mercAge, venAge, marsAge, jupAge, satAge, urAge, nepAge, pluAge);
-  console.log(calculatedSolarAges);
   return calculatedSolarAges;
+}
+
+export function sinceBDay(currentAge, pastAge) {
+  let ageDif = new EarthAge(currentAge - pastAge);
+  let calculatedAgeDifs = allAgesCalc(ageDif);
+  console.log(calculatedAgeDifs);
+  return calculatedAgeDifs;
 }
