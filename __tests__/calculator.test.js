@@ -48,3 +48,10 @@ describe('urCalc', () => {
     expect(noah.urCalc()).toEqual(0.396);
   });
 });
+
+describe('nepCalc', () => {
+  test('should take an earth age and convert it to neptune age', () => {
+    const noah = new EarthAge(33);
+    expect (noah.nepCalc()).toEqual(0.198);
+  })
+})
