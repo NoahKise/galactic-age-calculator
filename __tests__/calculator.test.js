@@ -88,7 +88,15 @@ describe('allAgesCalc', () => {
 describe('sinceBDay', () => {
   test('should take an earth age as an argument, and a past age as a second argument. then, should find the difference in those two numbers, and create a new EarthAge object with the value of the age property set to the difference. then, it should calculate how many years that translates to on each planet', () => {
     const currentAge = 33;
-    const pastBDay = 21;
-    expect(sinceBDay(currentAge, pastBDay)).toEqual({earthAge: 12, mercAge: 50.004, venAge: 19.356, marsAge: 6.384, jupAge: 1.008, satAge: 0.408, urAge: 0.144, nepAge: 0.072, pluAge: 0.048});
+    const pastAge = 21;
+    expect(sinceBDay(currentAge, pastAge)).toEqual({earthAge: 12, mercAge: 50.004, venAge: 19.356, marsAge: 6.384, jupAge: 1.008, satAge: 0.408, urAge: 0.144, nepAge: 0.072, pluAge: 0.048});
+  });
+});
+
+describe('untilBDay', () => {
+  test('should take an earth age as an argument, and a future age as a second argument. then, should find the difference in those two numbers, and create a new EarthAge object with the value of the age property set to the difference. then, it should calculate how many years that translates to on each planet', () => {
+    const currentAge = 33;
+    const futureAge = 45;
+    expect(untilBDay(currentAge, futureAge)).toEqual({earthAge: 12, mercAge: 50.004, venAge: 19.356, marsAge: 6.384, jupAge: 1.008, satAge: 0.408, urAge: 0.144, nepAge: 0.072, pluAge: 0.048});
   });
 });
