@@ -49,3 +49,18 @@ export class SolarAges {
     this.pluAge = pluAge;
   }
 }
+
+export function allAgesCalc(EarthAge){
+  let earthAge = EarthAge.age;
+  let mercAge = EarthAge.mercCalc();
+  let venAge = EarthAge.venCalc();
+  let marsAge = EarthAge.marsCalc();
+  let jupAge = EarthAge.jupCalc();
+  let satAge = EarthAge.satCalc();
+  let urAge = EarthAge.urCalc();
+  let nepAge = EarthAge.nepCalc();
+  let pluAge = EarthAge.pluCalc();
+  const calculatedSolarAges = new SolarAges(earthAge, mercAge, venAge, marsAge, jupAge, satAge, urAge, nepAge, pluAge);
+  console.log(calculatedSolarAges);
+  return calculatedSolarAges;
+}

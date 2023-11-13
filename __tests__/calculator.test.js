@@ -1,4 +1,4 @@
-import { EarthAge, SolarAges } from "../src/calculator.js";
+import { EarthAge, SolarAges, allAgesCalc } from "../src/calculator.js";
 
 describe('EarthAge', () => {
   test('should create an object with one property for age with an intiger as a value', () => {
@@ -80,9 +80,9 @@ describe('SolarAges', () => {
 
 
 describe('allAgesCalc', () => {
-  test('should take an earth age and return a SolarAges object', () => {
-    const noah = 33;
-    expect(allAgesCalc(noah)).toEqual({mercAge: 137.511, venAge: 53.229, marsAge: 17.556, jupAge: 2.772, satAge: 1.122, urAge: 0.396, nepAge: 0.198, pluAge: 0.132});
+  test('should take an EarthAge object and return a SolarAges object', () => {
+    const noah = new EarthAge(33);
+    expect(allAgesCalc(noah)).toEqual({earthAge: 33, mercAge: 137.511, venAge: 53.229, marsAge: 17.556, jupAge: 2.772, satAge: 1.122, urAge: 0.396, nepAge: 0.198, pluAge: 0.132});
   });
 });
 
