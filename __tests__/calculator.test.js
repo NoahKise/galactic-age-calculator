@@ -20,3 +20,10 @@ describe('venCalc()', () => {
     expect(noah.venCalc()).toEqual(53.229);
   });
 });
+
+describe('marsCalc', () => {
+  test('should take an earth age and convert it to mars age', () => {
+    const noah = new EarthAge(33);
+    expect(noah.marsCalc()).toEqual(17.556);
+  });
+});
