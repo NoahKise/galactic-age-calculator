@@ -109,9 +109,9 @@ describe('exactAge', () => {
   });
 });
 
-describe('nextBirthday', () => {
-  test('should take a SolarAges object and create a new object with properties for each planet with key values representing how many days until the next birthday on that planet', () => {
-    const noah = new SolarAges(33, 137.511, 53.229, 17.556, 2.772, 1.122, 0.396, 0.198, 0.132);
-    expect(nextBirthday(noah)).toEqual({ })
-  })
-})
+describe('futEarthCal()', () => {
+  test('should find how much of a year is left before the next birthday on earth, and multiply that by 365.25', () => {
+    const noah = new SolarAges(33.032, 137.664, 53.281, 17.573, 2.775, 1.123, 0.396, 0.198, 0.132)
+    expect(noah.futEarthCal()).toEqual(353.562);
+  });
+});
