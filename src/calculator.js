@@ -80,5 +80,6 @@ export function exactAge(date1, date2) {
   let timeDif = date2.getTime() - date1.getTime();
   let dateDif = timeDif / (1000 * 3600 * 24);
   let preciseAge = dateDif / 365.25;
-  return parseFloat(preciseAge.toFixed(3));
+  const calculatedPreciseAge = new EarthAge(parseFloat(preciseAge.toFixed(3)));
+  return calculatedPreciseAge;
 }
