@@ -27,3 +27,10 @@ describe('marsCalc', () => {
     expect(noah.marsCalc()).toEqual(17.556);
   });
 });
+
+describe('jupCalc', () => {
+  test('should take an earth age and convert it to jupiter age', () => {
+    const noah = new EarthAge(33);
+    expect(noah.jupCalc()).toEqual(2.772);
+  });
+});
