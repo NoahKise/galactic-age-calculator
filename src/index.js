@@ -1,7 +1,7 @@
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
-import { allAgesCalc, exactAge,} from "./calculator.js";
+import { allAgesCalc, exactAge } from "./calculator.js";
 
 function handleBirthdaySubmit(e) {
   e.preventDefault();
