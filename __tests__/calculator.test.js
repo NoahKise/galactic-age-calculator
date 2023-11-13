@@ -7,9 +7,9 @@ describe('EarthAge', () => {
   });
 });
 
-describe('mercAge()', () => {
+describe('mercCalc()', () => {
   test('should take an earth age and convert it to mercury age', () => {
     const noah = new EarthAge(33);
-    expect(noah.mercAge()).toEqual(137.5);
+    expect(noah.mercCalc()).toEqual(137.511);
   });
 });
