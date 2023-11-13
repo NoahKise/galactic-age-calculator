@@ -73,6 +73,11 @@ export class SolarAges {
     let daysUntil = (remainder * 4333);
     return parseFloat(daysUntil.toFixed(3));
   }
+  futSatCal() {
+    let remainder = (Math.ceil(this.satAge)) - this.satAge;
+    let daysUntil = (remainder * 10759);
+    return parseFloat(daysUntil.toFixed(3));
+  }
 }
 
 export function allAgesCalc(EarthAge) {
