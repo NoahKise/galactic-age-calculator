@@ -78,6 +78,7 @@ export function untilBDay(currentAge, futureAge) {
 
 export function exactAge(date1, date2) {
   let timeDif = date2.getTime() - date1.getTime();
-  var dateDif = timeDif / (1000 * 3600 * 24);
-  return dateDif;
+  let dateDif = timeDif / (1000 * 3600 * 24);
+  let preciseAge = dateDif / 365.25;
+  return parseFloat(preciseAge.toFixed(3));
 }
