@@ -48,19 +48,46 @@ function handleSinceDateSubmit(e) {
   let urH3 = document.createElement("h3");
   let nepH3 = document.createElement("h3");
   let pluH3 = document.createElement("h3");
-  earthH3.append("It has been " + sinceAges.earthAge + " Earth years since " + pastDate.toLocaleDateString() + ".");
-  mercH3.append("It has been " + sinceAges.mercAge + " Mercury years since " + pastDate.toLocaleDateString() + ".");
-  venH3.append("It has been " + sinceAges.venAge + " Venus years since " + pastDate.toLocaleDateString() + ".");
-  marsH3.append("It has been " + sinceAges.marsAge + " Mars years since " + pastDate.toLocaleDateString() + ".");
-  jupH3.append("It has been " + sinceAges.jupAge + " Jupiter years since " + pastDate.toLocaleDateString() + ".");
-  satH3.append("It has been " + sinceAges.satAge + " Saturn years since " + pastDate.toLocaleDateString() + ".");
-  urH3.append("It has been " + sinceAges.urAge + " Uranus years since " + pastDate.toLocaleDateString() + ".");
-  nepH3.append("It has been " + sinceAges.nepAge + " Neptune years since " + pastDate.toLocaleDateString() + ".");
-  pluH3.append("It has been " + sinceAges.pluAge + " Pluto years since " + pastDate.toLocaleDateString() + ".");
+  earthH3.append("It has been " + sinceAges.earthAge + " Earth years since " + pastDate.toDateString() + ".");
+  mercH3.append("It has been " + sinceAges.mercAge + " Mercury years since " + pastDate.toDateString() + ".");
+  venH3.append("It has been " + sinceAges.venAge + " Venus years since " + pastDate.toDateString() + ".");
+  marsH3.append("It has been " + sinceAges.marsAge + " Mars years since " + pastDate.toDateString() + ".");
+  jupH3.append("It has been " + sinceAges.jupAge + " Jupiter years since " + pastDate.toDateString() + ".");
+  satH3.append("It has been " + sinceAges.satAge + " Saturn years since " + pastDate.toDateString() + ".");
+  urH3.append("It has been " + sinceAges.urAge + " Uranus years since " + pastDate.toDateString() + ".");
+  nepH3.append("It has been " + sinceAges.nepAge + " Neptune years since " + pastDate.toDateString() + ".");
+  pluH3.append("It has been " + sinceAges.pluAge + " Pluto years since " + pastDate.toDateString() + ".");
   divResult.append(earthH3, mercH3, venH3, marsH3, jupH3, satH3, urH3, nepH3, pluH3);
 }
 
+function handleUntilDateSubmit(e) {
+  e.preventDefault();
+  const futureDate = new Date(document.getElementById("futureDate").value);
+  const todaysDate = new Date();
+  const until = exactAge(todaysDate, futureDate);
+  const untilAges = allAgesCalc(until);
+  const divResult = document.getElementById('result');
+  let earthH3 = document.createElement("h3");
+  let mercH3 = document.createElement("h3");
+  let venH3 = document.createElement("h3");
+  let marsH3 = document.createElement("h3");
+  let jupH3 = document.createElement("h3");
+  let satH3 = document.createElement("h3");
+  let urH3 = document.createElement("h3");
+  let nepH3 = document.createElement("h3");
+  let pluH3 = document.createElement("h3");
+  earthH3.append("It will be " + untilAges.earthAge + " Earth years until " + futureDate.toDateString() + ".");
+  mercH3.append("It will be " + untilAges.mercAge + " Mercury years until " + futureDate.toDateString() + ".");
+  venH3.append("It will be " + untilAges.venAge + " Venus years until " + futureDate.toDateString() + ".");
+  marsH3.append("It will be " + untilAges.marsAge + " Mars years until " + futureDate.toDateString() + ".");
+  jupH3.append("It will be " + untilAges.jupAge + " Jupiter years until " + futureDate.toDateString() + ".");
+  satH3.append("It will be " + untilAges.satAge + " Saturn years until " + futureDate.toDateString() + ".");
+  urH3.append("It will be " + untilAges.urAge + " Uranus years until " + futureDate.toDateString() + ".");
+  nepH3.append("It will be " + untilAges.nepAge + " Neptune years until " + futureDate.toDateString() + ".");
+  pluH3.append("It will be " + untilAges.pluAge + " Pluto years until " + futureDate.toDateString() + ".");
+  divResult.append(earthH3, mercH3, venH3, marsH3, jupH3, satH3, urH3, nepH3, pluH3);
+}
 
 document.getElementById("birthday").addEventListener("submit", handleBirthdaySubmit);
 document.getElementById("sinceDate").addEventListener("submit", handleSinceDateSubmit);
-// document.getElementById("birthday").addEventListener("submit", handleSubmit);
+document.getElementById("untilDate").addEventListener("submit", handleUntilDateSubmit);
