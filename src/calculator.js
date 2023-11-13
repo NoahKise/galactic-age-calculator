@@ -1,6 +1,6 @@
 export class EarthAge {
   constructor(age) {
-      this.age = age;
+    this.age = age;
   }
   mercCalc() {
     let mercAge = this.age * 4.167;
@@ -27,11 +27,11 @@ export class EarthAge {
     return parseFloat(urAge.toFixed(3));
   }
   nepCalc() {
-    let nepAge = this.age * 0.006
+    let nepAge = this.age * 0.006;
     return parseFloat(nepAge.toFixed(3));
   }
   pluCalc() {
-    let pluAge = this.age * 0.004
+    let pluAge = this.age * 0.004;
     return parseFloat(pluAge.toFixed(3));
   }
 }
