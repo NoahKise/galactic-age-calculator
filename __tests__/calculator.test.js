@@ -133,6 +133,6 @@ describe('futVenCal()', () => {
 describe('futMarsCal()', () => {
   test('should find how much of a year is left before the next birthday on Mars, and multiply that by 687', () => {
     const noah = new SolarAges(33.032, 137.664, 53.281, 17.573, 2.775, 1.123, 0.396, 0.198, 0.132)
-    expect(noah.futVenCal()).toEqual(293.349);
+    expect(noah.futMarsCal()).toEqual(293.349);
   });
 });
