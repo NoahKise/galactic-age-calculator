@@ -4,15 +4,15 @@ export class EarthAge {
   }
   mercCalc() {
     let mercAge = this.age * 4.167;
-    return mercAge;
+    return parseFloat(mercAge.toFixed(3));
   }
   venCalc() {
     let venAge = this.age * 1.613;
-    return venAge;
+    return parseFloat(venAge.toFixed(3));
   }
   marsCalc() {
     let marsAge = this.age * 0.532;
-    return marsAge;
+    return parseFloat(marsAge.toFixed(3));
   }
   jupCalc() {
     let jupAge = this.age * 0.084;
@@ -20,19 +20,19 @@ export class EarthAge {
   }
   satCalc() {
     let satAge = this.age * 0.034;
-    return satAge;
+    return parseFloat(satAge.toFixed(3));
   }
   urCalc() {
     let urAge = this.age * 0.012;
-    return urAge;
+    return parseFloat(urAge.toFixed(3));
   }
   nepCalc() {
     let nepAge = this.age * 0.006
-    return nepAge;
+    return parseFloat(nepAge.toFixed(3));
   }
   pluCalc() {
     let pluAge = this.age * 0.004
-    return pluAge;
+    return parseFloat(pluAge.toFixed(3));
   }
 }
 

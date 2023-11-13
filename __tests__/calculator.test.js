@@ -78,20 +78,15 @@ describe('SolarAges', () => {
   })
 })
 
-
 describe('allAgesCalc', () => {
   test('should take an EarthAge object and return a SolarAges object', () => {
-    const noah = new EarthAge(33);
+    const noah = new EarthAge(21);
     expect(allAgesCalc(noah)).toEqual({earthAge: 33, mercAge: 137.511, venAge: 53.229, marsAge: 17.556, jupAge: 2.772, satAge: 1.122, urAge: 0.396, nepAge: 0.198, pluAge: 0.132});
   });
 });
 
-
-
-
-
 // describe('sinceBDay', () => {
-//   test('should take an earth age as an argument, and a past age as a second argument. then, should find the difference in those two numbers, and calculate how many years that translates to on each planet', () => {
+//   test('should take an earth age as an argument, and a past age as a second argument. then, should find the difference in those two numbers, and create a new EarthAge object with the value of the age property set to the difference. then, it should calculate how many years that translates to on each planet', () => {
 //     const currentAge = 33;
 //     const pastBDay = 21;
 //     expect(sinceBDay(currentAge, pastBDay)).toEqual({ })
