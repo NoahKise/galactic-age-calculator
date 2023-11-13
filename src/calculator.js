@@ -73,7 +73,11 @@ export function sinceBDay(currentAge, pastAge) {
 export function untilBDay(currentAge, futureAge) {
   let ageDif = new EarthAge(futureAge - currentAge);
   let calculatedAgeDifs = allAgesCalc(ageDif);
-  console.log(calculatedAgeDifs);
   return calculatedAgeDifs;
 }
 
+export function exactAge(date1, date2) {
+  let timeDif = date2.getTime() - date1.getTime();
+  var dateDif = timeDif / (1000 * 3600 * 24);
+  return dateDif;
+}

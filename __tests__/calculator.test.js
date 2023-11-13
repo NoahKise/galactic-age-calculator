@@ -1,4 +1,4 @@
-import { EarthAge, SolarAges, allAgesCalc, sinceBDay, untilBDay } from "../src/calculator.js";
+import { EarthAge, SolarAges, allAgesCalc, sinceBDay, untilBDay, exactAge } from "../src/calculator.js";
 
 describe('EarthAge', () => {
   test('should create an object with one property for age with an intiger as a value', () => {
@@ -103,8 +103,8 @@ describe('untilBDay', () => {
 
 describe('exactAge', () => {
   test('should take two dates as arguments and find the number of days between them. then, should convert that number into an exact age in years', () => {
-    const date1 = "1990-11-02";
-    const date2 = "2023-11-13";
+    const date1 = new Date("1990-11-02");
+    const date2 = new Date("2023-11-13");
     expect(exactAge(date1, date2)).toEqual(12064);
   });
 });
