@@ -28,6 +28,7 @@ function handleBirthdaySubmit(e) {
   urH3.append("You are currently " + planetAges.urAge + " years old on Uranus.");
   nepH3.append("You are currently " + planetAges.nepAge + " years old on Neptune.");
   pluH3.append("You are currently " + planetAges.pluAge + " years old on Pluto.");
+  divResult.innerHTML = '';
   divResult.append(earthH3, mercH3, venH3, marsH3, jupH3, satH3, urH3, nepH3, pluH3);
 
 }
@@ -57,6 +58,7 @@ function handleSinceDateSubmit(e) {
   urH3.append("It has been " + sinceAges.urAge + " Uranus years since " + pastDate.toDateString() + ".");
   nepH3.append("It has been " + sinceAges.nepAge + " Neptune years since " + pastDate.toDateString() + ".");
   pluH3.append("It has been " + sinceAges.pluAge + " Pluto years since " + pastDate.toDateString() + ".");
+  divResult.innerHTML = '';
   divResult.append(earthH3, mercH3, venH3, marsH3, jupH3, satH3, urH3, nepH3, pluH3);
 }
 
@@ -85,6 +87,7 @@ function handleUntilDateSubmit(e) {
   urH3.append("It will be " + untilAges.urAge + " Uranus years until " + futureDate.toDateString() + ".");
   nepH3.append("It will be " + untilAges.nepAge + " Neptune years until " + futureDate.toDateString() + ".");
   pluH3.append("It will be " + untilAges.pluAge + " Pluto years until " + futureDate.toDateString() + ".");
+  divResult.innerHTML = '';
   divResult.append(earthH3, mercH3, venH3, marsH3, jupH3, satH3, urH3, nepH3, pluH3);
 }
 
