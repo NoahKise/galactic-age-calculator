@@ -41,3 +41,10 @@ describe('satCalc', () => {
     expect(noah.satCalc()).toEqual(1.122);
   });
 });
+
+describe('urCalc', () => {
+  test('should take an earth age and convert it to uranus age', () => {
+    const noah = new EarthAge(33);
+    expect(noah.urCalc()).toEqual(0.396);
+  });
+});
