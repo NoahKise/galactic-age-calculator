@@ -10,5 +10,9 @@ export class EarthAge {
     let venAge = this.age * 1.613;
     return venAge;
   }
+  marsCalc() {
+    let marsAge = this.age * 0.532;
+    return marsAge;
+  }
 }
 
