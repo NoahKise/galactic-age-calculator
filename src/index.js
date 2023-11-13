@@ -9,6 +9,7 @@ function handleBirthdaySubmit(e) {
   const todaysDate = new Date();
   const preciseAge = exactAge(userBDay, todaysDate);
   const planetAges = allAgesCalc(preciseAge);
+  console.log(planetAges);
   const divResult = document.getElementById('result');
   let earthH3 = document.createElement("h3");
   let mercH3 = document.createElement("h3");
