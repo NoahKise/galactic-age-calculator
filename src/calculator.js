@@ -22,4 +22,8 @@ export class EarthAge {
     let satAge = this.age * .034;
     return satAge;
   }
+  urCalc() {
+    let urAge = this.age * .012;
+    return urAge;
+  }
 }
