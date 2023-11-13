@@ -34,3 +34,10 @@ describe('jupCalc', () => {
     expect(noah.jupCalc()).toEqual(2.772);
   });
 });
+
+describe('satCalc', () => {
+  test('should take an earth age and convert it to saturn age', () => {
+    const noah = new EarthAge(33);
+    expect(noah.satCalc()).toEqual(1.122);
+  });
+});
