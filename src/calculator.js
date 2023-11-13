@@ -14,5 +14,8 @@ export class EarthAge {
     let marsAge = this.age * 0.532;
     return marsAge;
   }
+  jupCalc() {
+    let jupAge = this.age * 0.084;
+    return jupAge;
+  }
 }
-
