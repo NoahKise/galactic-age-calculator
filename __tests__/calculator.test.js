@@ -13,3 +13,10 @@ describe('mercCalc()', () => {
     expect(noah.mercCalc()).toEqual(137.511);
   });
 });
+
+describe('venCalc()', () => {
+  test('should take an earth age and convert it to venus age', () => {
+    const noah = new EarthAge(33);
+    expect(noah.venCalc()).toEqual(53.229);
+  });
+});
