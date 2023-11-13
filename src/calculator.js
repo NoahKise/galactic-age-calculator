@@ -19,11 +19,15 @@ export class EarthAge {
     return parseFloat(jupAge.toFixed(3));
   }
   satCalc() {
-    let satAge = this.age * .034;
+    let satAge = this.age * 0.034;
     return satAge;
   }
   urCalc() {
-    let urAge = this.age * .012;
+    let urAge = this.age * 0.012;
     return urAge;
+  }
+  nepCalc() {
+    let nepAge = this.age * 0.006
+    return nepAge;
   }
 }
