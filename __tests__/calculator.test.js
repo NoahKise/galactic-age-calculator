@@ -136,3 +136,10 @@ describe('futMarsCal()', () => {
     expect(noah.futMarsCal()).toEqual(293.349);
   });
 });
+
+describe('futJupCal()', () => {
+  test('should find how much of a year is left before the next birthday on Jupiter, and multiply that by 4333', () => {
+    const noah = new SolarAges(33.032, 137.664, 53.281, 17.573, 2.775, 1.123, 0.396, 0.198, 0.132)
+    expect(noah.futJupCal()).toEqual(974.925);
+  });
+});
