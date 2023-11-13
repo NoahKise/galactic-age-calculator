@@ -35,3 +35,17 @@ export class EarthAge {
     return pluAge;
   }
 }
+
+export class SolarAges {
+  constructor(earthAge, mercAge, venAge, marsAge, jupAge, satAge, urAge, nepAge, pluAge) {
+    this.earthAge = earthAge;
+    this.mercAge = mercAge;
+    this.venAge = venAge;
+    this.marsAge = marsAge;
+    this.jupAge = jupAge;
+    this.satAge = satAge;
+    this.urAge = urAge;
+    this.nepAge = nepAge;
+    this.pluAge = pluAge;
+  }
+}
