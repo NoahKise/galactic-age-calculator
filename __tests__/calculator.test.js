@@ -102,9 +102,14 @@ describe('untilBDay', () => {
 });
 
 describe('exactAge', () => {
-  test('should take two dates as arguments and find the number of days between them. then, should convert that number into an exact age in years', () => {
+  test('should take two dates as arguments and find the number of days between them.', () => {
     const date1 = new Date("1990-11-02");
     const date2 = new Date("2023-11-13");
     expect(exactAge(date1, date2)).toEqual(12064);
+  });
+  test('should take two dates as arguments and find the number of days between them. then, should convert that number into an exact age in years', () => {
+    const date1 = new Date("1990-11-02");
+    const date2 = new Date("2023-11-13");
+    expect(exactAge(date1, date2)).toEqual(33.029);
   });
 });
