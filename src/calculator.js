@@ -16,6 +16,7 @@ export class EarthAge {
   }
   jupCalc() {
     let jupAge = this.age * 0.084;
-    return jupAge;
+    return parseFloat(jupAge.toFixed(3));
   }
+
 }
