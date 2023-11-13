@@ -68,6 +68,11 @@ export class SolarAges {
     let daysUntil = (remainder * 687);
     return parseFloat(daysUntil.toFixed(3));
   }
+  futJupCal() {
+    let remainder = (Math.ceil(this.jupAge)) - this.jupAge;
+    let daysUntil = (remainder * 4333);
+    return parseFloat(daysUntil.toFixed(3));
+  }
 }
 
 export function allAgesCalc(EarthAge) {
