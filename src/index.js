@@ -35,7 +35,7 @@ function handleBirthdaySubmit(e) {
 
 function handleSinceDateSubmit(e) {
   e.preventDefault();
-  const pastDate = new Date(document.getElementById("pastDate").value);
+  const pastDate = new Date(document.getElementById("pastDate").value + 'T00:00:00Z');
   const todaysDate = new Date();
   const since = exactAge(pastDate, todaysDate);
   const sinceAges = allAgesCalc(since);
@@ -49,22 +49,22 @@ function handleSinceDateSubmit(e) {
   let urH3 = document.createElement("h3");
   let nepH3 = document.createElement("h3");
   let pluH3 = document.createElement("h3");
-  earthH3.append("It has been " + sinceAges.earthAge + " Earth years since " + pastDate.toDateString() + ".");
-  mercH3.append("It has been " + sinceAges.mercAge + " Mercury years since " + pastDate.toDateString() + ".");
-  venH3.append("It has been " + sinceAges.venAge + " Venus years since " + pastDate.toDateString() + ".");
-  marsH3.append("It has been " + sinceAges.marsAge + " Mars years since " + pastDate.toDateString() + ".");
-  jupH3.append("It has been " + sinceAges.jupAge + " Jupiter years since " + pastDate.toDateString() + ".");
-  satH3.append("It has been " + sinceAges.satAge + " Saturn years since " + pastDate.toDateString() + ".");
-  urH3.append("It has been " + sinceAges.urAge + " Uranus years since " + pastDate.toDateString() + ".");
-  nepH3.append("It has been " + sinceAges.nepAge + " Neptune years since " + pastDate.toDateString() + ".");
-  pluH3.append("It has been " + sinceAges.pluAge + " Pluto years since " + pastDate.toDateString() + ".");
+  earthH3.append("It has been " + sinceAges.earthAge + " Earth years since " + pastDate.toISOString().split('T')[0] + ".");
+  mercH3.append("It has been " + sinceAges.mercAge + " Mercury years since " + pastDate.toISOString().split('T')[0] + ".");
+  venH3.append("It has been " + sinceAges.venAge + " Venus years since " + pastDate.toISOString().split('T')[0] + ".");
+  marsH3.append("It has been " + sinceAges.marsAge + " Mars years since " + pastDate.toISOString().split('T')[0] + ".");
+  jupH3.append("It has been " + sinceAges.jupAge + " Jupiter years since " + pastDate.toISOString().split('T')[0] + ".");
+  satH3.append("It has been " + sinceAges.satAge + " Saturn years since " + pastDate.toISOString().split('T')[0] + ".");
+  urH3.append("It has been " + sinceAges.urAge + " Uranus years since " + pastDate.toISOString().split('T')[0] + ".");
+  nepH3.append("It has been " + sinceAges.nepAge + " Neptune years since " + pastDate.toISOString().split('T')[0] + ".");
+  pluH3.append("It has been " + sinceAges.pluAge + " Pluto years since " + pastDate.toISOString().split('T')[0] + ".");
   divResult.innerHTML = '';
   divResult.append(earthH3, mercH3, venH3, marsH3, jupH3, satH3, urH3, nepH3, pluH3);
 }
 
 function handleUntilDateSubmit(e) {
   e.preventDefault();
-  const futureDate = new Date(document.getElementById("futureDate").value);
+  const futureDate = new Date(document.getElementById("futureDate").value + 'T00:00:00Z');
   const todaysDate = new Date();
   const until = exactAge(todaysDate, futureDate);
   const untilAges = allAgesCalc(until);
@@ -76,17 +76,17 @@ function handleUntilDateSubmit(e) {
   let jupH3 = document.createElement("h3");
   let satH3 = document.createElement("h3");
   let urH3 = document.createElement("h3");
-  let nepH3 = document.createElement("h3");
+  let nepH3 =  document.createElement("h3");
   let pluH3 = document.createElement("h3");
-  earthH3.append("It will be " + untilAges.earthAge + " Earth years until " + futureDate.toDateString() + ".");
-  mercH3.append("It will be " + untilAges.mercAge + " Mercury years until " + futureDate.toDateString() + ".");
-  venH3.append("It will be " + untilAges.venAge + " Venus years until " + futureDate.toDateString() + ".");
-  marsH3.append("It will be " + untilAges.marsAge + " Mars years until " + futureDate.toDateString() + ".");
-  jupH3.append("It will be " + untilAges.jupAge + " Jupiter years until " + futureDate.toDateString() + ".");
-  satH3.append("It will be " + untilAges.satAge + " Saturn years until " + futureDate.toDateString() + ".");
-  urH3.append("It will be " + untilAges.urAge + " Uranus years until " + futureDate.toDateString() + ".");
-  nepH3.append("It will be " + untilAges.nepAge + " Neptune years until " + futureDate.toDateString() + ".");
-  pluH3.append("It will be " + untilAges.pluAge + " Pluto years until " + futureDate.toDateString() + ".");
+  earthH3.append("It will be " + untilAges.earthAge + " Earth years until " + futureDate.toISOString().split('T')[0] + ".");
+  mercH3.append("It will be " + untilAges.mercAge + " Mercury years until " + futureDate.toISOString().split('T')[0] + ".");
+  venH3.append("It will be " + untilAges.venAge + " Venus years until " + futureDate.toISOString().split('T')[0] + ".");
+  marsH3.append("It will be " + untilAges.marsAge + " Mars years until " + futureDate.toISOString().split('T')[0] + ".");
+  jupH3.append("It will be " + untilAges.jupAge + " Jupiter years until " + futureDate.toISOString().split('T')[0] + ".");
+  satH3.append("It will be " + untilAges.satAge + " Saturn years until " + futureDate.toISOString().split('T')[0] + ".");
+  urH3.append("It will be " + untilAges.urAge + " Uranus years until " + futureDate.toISOString().split('T')[0] + ".");
+  nepH3.append("It will be " + untilAges.nepAge + " Neptune years until " + futureDate.toISOString().split('T')[0] + ".");
+  pluH3.append("It will be " + untilAges.pluAge + " Pluto years until " + futureDate.toISOString().split('T')[0] + ".");
   divResult.innerHTML = '';
   divResult.append(earthH3, mercH3, venH3, marsH3, jupH3, satH3, urH3, nepH3, pluH3);
 }
