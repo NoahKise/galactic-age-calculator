@@ -143,3 +143,10 @@ describe('futJupCal()', () => {
     expect(noah.futJupCal()).toEqual(974.925);
   });
 });
+
+describe('futSatCal()', () => {
+  test('should find how much of a year is left before the next birthday on Saturn, and multiply that by 10759', () => {
+    const noah = new SolarAges(33.032, 137.664, 53.281, 17.573, 2.775, 1.123, 0.396, 0.198, 0.132)
+    expect(noah.futSatCal()).toEqual(9435.643);
+  });
+});
