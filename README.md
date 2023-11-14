@@ -17,7 +17,7 @@
 
 ## Description
 
-This web application allows a user to input their birthday and see how many solar years old they are for each planet.  It also allows the user to input a past date and see how many solar years have passed since that date on each planet, as well as input a future date and see how many solar years have yet to pass before that date on each planet.
+This web application allows a user to input their birthday and see how many solar years old they are for each planet.  It also allows the user to input a past date and see how many solar years have passed since that date on each planet, as well as input a future date and see how many solar years have yet to pass before that date on each planet. A user can also enter their birthday and see how many earth days it is until their next birthday on each planet.
 
 ## Setup/Installation Requirements
 
