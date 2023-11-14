@@ -1,7 +1,7 @@
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
-import { allAgesCalc, exactAge } from "./calculator.js";
+import { allAgesCalc, exactAge, nextBirthday } from "./calculator.js";
 
 function handleBirthdaySubmit(e) {
   e.preventDefault();
@@ -9,7 +9,6 @@ function handleBirthdaySubmit(e) {
   const todaysDate = new Date();
   const preciseAge = exactAge(userBDay, todaysDate);
   const planetAges = allAgesCalc(preciseAge);
-  console.log(planetAges);
   const divResult = document.getElementById('result');
   let earthH3 = document.createElement("h3");
   let mercH3 = document.createElement("h3");
@@ -92,6 +91,38 @@ function handleUntilDateSubmit(e) {
   divResult.append(earthH3, mercH3, venH3, marsH3, jupH3, satH3, urH3, nepH3, pluH3);
 }
 
+function handleNextBirthdaySubmit(e) {
+  e.preventDefault();
+  const userBDay = new Date(document.getElementById("dateOfBirth").value);
+  const todaysDate = new Date();
+  const preciseAge = exactAge(userBDay, todaysDate);
+  const planetAges = allAgesCalc(preciseAge);
+  const daysUntilNextBirthday = nextBirthday(planetAges);
+  const divResult = document.getElementById('result');
+  let earthH3 = document.createElement("h3");
+  let mercH3 = document.createElement("h3");
+  let venH3 = document.createElement("h3");
+  let marsH3 = document.createElement("h3");
+  let jupH3 = document.createElement("h3");
+  let satH3 = document.createElement("h3");
+  let urH3 = document.createElement("h3");
+  let nepH3 = document.createElement("h3");
+  let pluH3 = document.createElement("h3");
+  earthH3.append("It is " + daysUntilNextBirthday.earthAge + " earth days until your next birthday on Earth.");
+  mercH3.append("It is " + daysUntilNextBirthday.mercAge + " earth days until your next birthday on Mercury.");
+  venH3.append("It is " + daysUntilNextBirthday.venAge + " earth days until your next birthday on Venus.");
+  marsH3.append("It is " + daysUntilNextBirthday.marsAge + " earth days until your next birthday on Mars.");
+  jupH3.append("It is " + daysUntilNextBirthday.jupAge + " earth days until your next birthday on Jupiter.");
+  satH3.append("It is " + daysUntilNextBirthday.satAge + " earth days until your next birthday on Saturn.");
+  urH3.append("It is " + daysUntilNextBirthday.urAge + " earth days until your next birthday on Uranus.");
+  nepH3.append("It is " + daysUntilNextBirthday.nepAge + " earth days until your next birthday on Neptune.");
+  pluH3.append("It is " + daysUntilNextBirthday.pluAge + " earth days until your next birthday on Pluto.");
+  divResult.innerHTML = '';
+  divResult.append(earthH3, mercH3, venH3, marsH3, jupH3, satH3, urH3, nepH3, pluH3);
+
+}
+
 document.getElementById("birthday").addEventListener("submit", handleBirthdaySubmit);
 document.getElementById("sinceDate").addEventListener("submit", handleSinceDateSubmit);
 document.getElementById("untilDate").addEventListener("submit", handleUntilDateSubmit);
+document.getElementById("birthday2").addEventListener("submit", handleNextBirthdaySubmit);
