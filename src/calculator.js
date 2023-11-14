@@ -109,6 +109,7 @@ export function allAgesCalc(EarthAge) {
   return calculatedSolarAges;
 }
 
+
 export function sinceBDay(currentAge, pastAge) {
   let ageDif = new EarthAge(currentAge - pastAge);
   let calculatedAgeDifs = allAgesCalc(ageDif);

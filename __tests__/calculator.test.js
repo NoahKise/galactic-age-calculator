@@ -1,4 +1,4 @@
-import { EarthAge, SolarAges, allAgesCalc, sinceBDay, untilBDay, exactAge } from "../src/calculator.js";
+import { EarthAge, SolarAges, allAgesCalc, sinceBDay, untilBDay, exactAge, nextBirthday } from "../src/calculator.js";
 
 describe('EarthAge', () => {
   test('should create an object with one property for age with an intiger as a value', () => {
@@ -169,5 +169,12 @@ describe('futPluCal()', () => {
   test('should find how much of a year is left before the next birthday on Pluto, and multiply that by 90650', () => {
     const noah = new SolarAges(33.032, 137.664, 53.281, 17.573, 2.775, 1.123, 0.396, 0.198, 0.132)
     expect(noah.futPluCal()).toEqual(78684.2);
+  });
+});
+
+describe('nextBirthday', () => {
+  test('should take a SolarAges object and return a new object with properties for how many days it is until the next birthday on each planet', () => {
+    const noah = new SolarAges(33.032, 137.664, 53.281, 17.573, 2.775, 1.123, 0.396, 0.198, 0.132)
+    expect(nextBirthday(noah)).toEqual({nextEarth: 353.562, nextMerc: 29.568, nextVen: 161.775, nextMars: 293.349, nextJup: 974.925, nextSat: 9435.643, nextUr: 18534.948, nextNep: 48272.38, nextPlu: 78684.2});
   });
 });
