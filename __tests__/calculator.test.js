@@ -175,6 +175,6 @@ describe('futPluCal()', () => {
 describe('nextBirthday', () => {
   test('should take a SolarAges object and return a new object with properties for how many days it is until the next birthday on each planet', () => {
     const noah = new SolarAges(33.032, 137.664, 53.281, 17.573, 2.775, 1.123, 0.396, 0.198, 0.132)
-    expect(nextBirthday(noah)).toEqual({nextEarth: 353.562, nextMerc: 29.568, nextVen: 161.775, nextMars: 293.349, nextJup: 974.925, nextSat: 9435.643, nextUr: 18534.948, nextNep: 48272.38, nextPlu: 78684.2});
+    expect(nextBirthday(noah)).toEqual({earthAge: 353.562, mercAge: 29.568, venAge: 161.775, marsAge: 293.349, jupAge: 974.925, satAge: 9435.643, urAge: 18534.948, nepAge: 48272.38, pluAge: 78684.2});
   });
 });

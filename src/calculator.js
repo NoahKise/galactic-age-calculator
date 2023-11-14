@@ -109,6 +109,20 @@ export function allAgesCalc(EarthAge) {
   return calculatedSolarAges;
 }
 
+export function nextBirthday(solarAges) {
+  let earthAge = solarAges.futEarthCal();
+  let mercAge = solarAges.futMercCal();
+  let venAge = solarAges.futVenCal();
+  let marsAge = solarAges.futMarsCal();
+  let jupAge = solarAges.futJupCal();
+  let satAge = solarAges.futSatCal();
+  let urAge = solarAges.futUrCal();
+  let nepAge = solarAges.futNepCal();
+  let pluAge = solarAges.futPluCal();
+  const calculatedNextBirthdays = new SolarAges(earthAge, mercAge, venAge, marsAge, jupAge, satAge, urAge, nepAge, pluAge);
+  return calculatedNextBirthdays;
+}
+
 
 export function sinceBDay(currentAge, pastAge) {
   let ageDif = new EarthAge(currentAge - pastAge);
