@@ -22,6 +22,7 @@ This web application allows a user to input their birthday and see how many sola
 ## Setup/Installation Requirements
 
 * To run this program locally on your own computer, first navigate to the repository (https://github.com/NoahKise/galactic-age-calculator).  Clone the project by clicking the green "code" button and then copying the provided https link. In your terminal, enter the command "git clone" followed by the copied link. Navigate to the root folder of this project (galactic-age-calculator) in your terminal and enter the command "code ." to open the project in VS Code. In the root folder of this project, in your terminal enter the command "npm install". Finally, in the root folder of this project, in your terminal enter the command "npm run start".
+* To run the business logic tests included in calculator.test.js, first make sure you've followed the previous instructions for proper installation and building. Then, navigate to the root folder of this project in the terminal, and enter the command "npm run test".
 * To view on the web via GH Pages, open a web browser and type https://noahkise.github.io/galactic-age-calculator into the navigation bar and press enter.
 
 ## Known Bugs
